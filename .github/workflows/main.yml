@@ -22,7 +22,7 @@ jobs:
   
     # 编译后端Java项目  
     - name: Build with Maven  
-      working-directory: ./back
+     # working-directory: ./back
       run: mvn clean package -DskipTests  
       
   
