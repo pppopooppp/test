@@ -22,9 +22,8 @@ jobs:
   
     # 编译后端Java项目  
     - name: Build with Maven  
-     # working-directory: ./back
+      working-directory: ./back  # 设置工作目录为 ./back  
       run: mvn clean package -DskipTests  
-      
   
     # 安装Node.js环境（如果需要）  
     - name: Set up Node.js  
@@ -34,10 +33,10 @@ jobs:
   
     # 进入前端目录并执行相关命令（例如npm install, npm run build）  
     - name: Install and build frontend  
-      working-directory: ./front-end  # 假设前端代码在frontend目录下  
+      working-directory: ./front-end  # 假设前端代码在 front-end 目录下  
       run: |  
         npm ci  
         npm run build  
   
     # （可选）部署或其他后续步骤  
-    # 例如，你可以使用scp、rsync或AWS S3 sync等命令将构建产物上传到服务器或存储桶
+    # ...
